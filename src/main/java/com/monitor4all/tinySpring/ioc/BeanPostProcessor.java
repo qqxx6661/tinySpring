@@ -1,0 +1,7 @@
+package com.monitor4all.tinySpring.ioc;
+
+public interface BeanPostProcessor {
+    Object postProcessBeforeInitialization(Object bean, String beanName) throws Exception;
+
+    Object postProcessAfterInitialization(Object bean, String beanName) throws Exception;
+}
