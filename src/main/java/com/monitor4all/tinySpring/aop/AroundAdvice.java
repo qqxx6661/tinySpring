@@ -17,11 +17,11 @@ public class AroundAdvice implements Advice {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         // 在目标方法执行前调用通知
-        System.out.println("在目标方法执行前调用通知：");
+        System.out.println("在目标方法执行前调用打印日志方法：");
         beforeMethodInvocation.invoke();
         Object invoke = method.invoke(bean, args);
         //在真实的对象执行之后我们可以添加自己的操作
-        System.out.println("目标方法执行后调用通知：");
+        System.out.println("在目标方法执行后调用打印日志方法：");
         afterMethodInvocation.invoke();
         return invoke;
     }

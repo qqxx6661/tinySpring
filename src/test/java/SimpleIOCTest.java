@@ -1,4 +1,4 @@
-import com.monitor4all.tinySpring.SimpleIOC;
+import com.monitor4all.tinySpring.ioc.SimpleIOC;
 import com.monitor4all.tinySpring.dao.Car;
 import com.monitor4all.tinySpring.dao.Wheel;
 import org.junit.Test;
