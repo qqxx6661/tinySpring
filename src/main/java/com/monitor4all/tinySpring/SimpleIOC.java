@@ -22,14 +22,6 @@ public class SimpleIOC {
         loadBeans(location);
     }
 
-    public Object getBean(String name) {
-        Object bean = beanMap.get(name);
-        if (bean == null) {
-            throw new IllegalArgumentException("No bean with name " + name);
-        }
-        return bean;
-    }
-
     private void loadBeans(String location) throws Exception {
 
         // 加载 xml 配置文件
@@ -48,8 +40,8 @@ public class SimpleIOC {
                 String id = ele.getAttribute("id");
                 String className = ele.getAttribute("class");
 
-                // 加载 beanClass
-                Class beanClass = null;
+                // 通过class名称 加载 beanClass
+                Class beanClass;
                 try {
                     beanClass = Class.forName(className);
                 } catch (ClassNotFoundException e) {
@@ -57,7 +49,7 @@ public class SimpleIOC {
                     return;
                 }
 
-                // 创建 bean
+                // 创建 名称对应的bean
                 Object bean = beanClass.newInstance();
 
                 // 遍历 <property> 标签
@@ -69,7 +61,7 @@ public class SimpleIOC {
                         String name = propertyElement.getAttribute("name");
                         String value = propertyElement.getAttribute("value");
 
-                        // 利用反射将 bean 相关字段访问权限设为可访问
+                        // 利用反射将 bean 相关字段访问权限设为可访问 （setAccessible将private字段设为允许读写）
                         Field declaredField = bean.getClass().getDeclaredField(name);
                         declaredField.setAccessible(true);
 
@@ -77,21 +69,28 @@ public class SimpleIOC {
                             // 将属性值填充到相关字段中
                             declaredField.set(bean, value);
                         } else {
+                            // 若为ref属性，则设置该bean的引用
                             String ref = propertyElement.getAttribute("ref");
                             if (ref == null || ref.length() == 0) {
                                 throw new IllegalArgumentException("ref config error");
                             }
-
                             // 将引用填充到相关字段中
                             declaredField.set(bean, getBean(ref));
                         }
-
                         // 将 bean 注册到 bean 容器中
                         registerBean(id, bean);
                     }
                 }
             }
         }
+    }
+
+    public Object getBean(String name) {
+        Object bean = beanMap.get(name);
+        if (bean == null) {
+            throw new IllegalArgumentException("No bean with name " + name);
+        }
+        return bean;
     }
 
     private void registerBean(String id, Object bean) {
