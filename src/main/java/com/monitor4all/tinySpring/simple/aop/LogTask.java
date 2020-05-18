@@ -1,4 +1,4 @@
-package com.monitor4all.tinySpring.aop;
+package com.monitor4all.tinySpring.simple.aop;
 
 public class LogTask implements MethodInvocation {
     @Override

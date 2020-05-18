@@ -1,4 +1,4 @@
-package com.monitor4all.tinySpring.dao;
+package com.monitor4all.tinySpring.simple.dao;
 
 public class Wheel {
 

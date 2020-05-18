@@ -1,4 +1,4 @@
-package com.monitor4all.tinySpring.service;
+package com.monitor4all.tinySpring.simple.service;
 
 public class HelloServiceImpl implements HelloService {
     @Override

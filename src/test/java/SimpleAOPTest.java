@@ -1,6 +1,6 @@
-import com.monitor4all.tinySpring.aop.*;
-import com.monitor4all.tinySpring.service.HelloService;
-import com.monitor4all.tinySpring.service.HelloServiceImpl;
+import com.monitor4all.tinySpring.simple.aop.*;
+import com.monitor4all.tinySpring.simple.service.HelloService;
+import com.monitor4all.tinySpring.simple.service.HelloServiceImpl;
 import org.junit.Test;
 
 public class SimpleAOPTest {

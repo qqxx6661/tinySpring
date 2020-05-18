@@ -1,4 +1,4 @@
-package com.monitor4all.tinySpring.ioc;
+package com.monitor4all.tinySpring.simple.ioc;
 
 
 import org.w3c.dom.Document;
