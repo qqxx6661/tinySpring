@@ -1,10 +1,10 @@
 <beans>
-    <bean id="wheel" class="com.monitor4all.tinySpring.simple.dao.Wheel">
+    <bean id="wheel" class="com.monitor4all.tinySpring.dao.Wheel">
         <property name="brand" value="Michelin" />
         <property name="specification" value="265/60 R18" />
     </bean>
 
-    <bean id="car" class="com.monitor4all.tinySpring.simple.dao.Car">
+    <bean id="car" class="com.monitor4all.tinySpring.dao.Car">
         <property name="name" value="Mercedes Benz G 500"/>
         <property name="length" value="4717mm"/>
         <property name="width" value="1855mm"/>

@@ -1,6 +1,6 @@
 import com.monitor4all.tinySpring.simple.ioc.SimpleIOC;
-import com.monitor4all.tinySpring.simple.dao.Car;
-import com.monitor4all.tinySpring.simple.dao.Wheel;
+import com.monitor4all.tinySpring.dao.Car;
+import com.monitor4all.tinySpring.dao.Wheel;
 import org.junit.Test;
 
 public class SimpleIOCTest {
@@ -9,7 +9,7 @@ public class SimpleIOCTest {
     public void getBean() throws Exception {
 
         // 拿到ioc.xml路径
-        String location = SimpleIOC.class.getClassLoader().getResource("ioc.xml").getFile();
+        String location = SimpleIOC.class.getClassLoader().getResource("simple.xml").getFile();
         // 通过ioc.xml初始化SimpleIOC
         SimpleIOC bf = new SimpleIOC(location);
         // 获取容器里两个类
