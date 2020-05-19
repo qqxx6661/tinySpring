@@ -104,7 +104,7 @@ public class XmlBeanFactory implements BeanFactory {
      * @return
      * @throws Exception
      */
-    private List getBeansForType(Class type) throws Exception {
+    public List getBeansForType(Class type) throws Exception {
         List beans = new ArrayList<>();
         for (String beanDefinitionName : beanDefinitionNames) {
             if (type.isAssignableFrom(beanDefinitionMap.get(beanDefinitionName).getBeanClass())) {
