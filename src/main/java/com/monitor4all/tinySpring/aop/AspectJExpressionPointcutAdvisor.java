@@ -3,7 +3,9 @@ package com.monitor4all.tinySpring.aop;
 import org.aopalliance.aop.Advice;
 
 /**
- * AspectJ实现表达式顾问切入点
+ * AspectJ实现表达式顾问切入类
+ * 定义：表达式切入点AspectJExpressionPointcut
+ * 定义：一个需要织入的逻辑Advice
  */
 public class AspectJExpressionPointcutAdvisor implements PointcutAdvisor {
 

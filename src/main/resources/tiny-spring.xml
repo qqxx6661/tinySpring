@@ -15,6 +15,7 @@
 
     <bean id="helloService" class="com.monitor4all.tinySpring.service.HelloServiceImpl"/>
 
+    <!--  织入的日志切面逻辑  -->
     <bean id="logInterceptor" class="com.monitor4all.tinySpring.aop.LogInterceptor"/>
 
     <bean id="autoProxyCreator" class="com.monitor4all.tinySpring.aop.AspectJAwareAdvisorAutoProxyCreator"/>
