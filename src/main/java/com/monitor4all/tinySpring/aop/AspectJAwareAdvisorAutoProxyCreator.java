@@ -9,6 +9,7 @@ import org.aopalliance.intercept.MethodInterceptor;
 import java.util.List;
 
 public class AspectJAwareAdvisorAutoProxyCreator implements BeanPostProcessor, BeanFactoryAware {
+
     private XmlBeanFactory xmlBeanFactory;
 
     @Override

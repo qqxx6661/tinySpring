@@ -1,5 +1,10 @@
 package com.monitor4all.tinySpring.aop;
 
+/**
+ * 获取代理类工厂
+ * 1. 实现获取代理类接口
+ * 2. 继承织入辅助类
+ */
 public class ProxyFactory extends AdvisedSupport implements AopProxy {
 
     @Override

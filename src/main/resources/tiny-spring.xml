@@ -1,4 +1,5 @@
 <beans>
+
     <bean id="wheel" class="com.monitor4all.tinySpring.dao.Wheel">
         <property name="brand" value="Michelin" />
         <property name="specification" value="265/60 R18" />
@@ -12,15 +13,15 @@
         <property name="wheel" ref="wheel"/>
     </bean>
 
-<!--    <bean id="helloService" class="com.monitor4all.tinySpring.service.HelloServiceImpl"/>-->
+    <bean id="helloService" class="com.monitor4all.tinySpring.service.HelloServiceImpl"/>
 
-<!--    <bean id="logInterceptor" class="com.titizz.simulation.toyspring.aop.LogInterceptor"/>-->
+    <bean id="logInterceptor" class="com.monitor4all.tinySpring.aop.LogInterceptor"/>
 
-<!--    <bean id="autoProxyCreator" class="com.titizz.simulation.toyspring.aop.AspectJAwareAdvisorAutoProxyCreator"/>-->
+    <bean id="autoProxyCreator" class="com.monitor4all.tinySpring.aop.AspectJAwareAdvisorAutoProxyCreator"/>
 
-<!--    <bean id="helloServiceAspect" class="com.titizz.simulation.toyspring.aop.AspectJExpressionPointcutAdvisor">-->
-<!--        <property name="advice" ref="logInterceptor"/>-->
-<!--        <property name="expression" value="execution(* com.titizz.simulation.toyspring.HelloService.*(..))"/>-->
-<!--    </bean>-->
+    <bean id="helloServiceAspect" class="com.monitor4all.tinySpring.aop.AspectJExpressionPointcutAdvisor">
+        <property name="advice" ref="logInterceptor"/>
+        <property name="expression" value="execution(* com.monitor4all.tinySpring.service.HelloService.*(..))"/>
+    </bean>
 
 </beans>

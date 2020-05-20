@@ -16,8 +16,8 @@ public class XmlBeanFactoryTest {
         Car car = (Car) bf.getBean("car");
         System.out.println(car);
 
-//        System.out.println("\n--------- AOP test ----------");
-//        HelloService helloService = (HelloService) bf.getBean("helloService");
-//        helloService.sayHelloWorld();
+        System.out.println("\n--------- AOP test ----------");
+        HelloService helloService = (HelloService) bf.getBean("helloService");
+        helloService.sayHelloWorld();
     }
 }

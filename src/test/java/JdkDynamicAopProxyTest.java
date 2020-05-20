@@ -21,7 +21,7 @@ public class JdkDynamicAopProxyTest {
         AdvisedSupport advisedSupport = new AdvisedSupport();
         advisedSupport.setMethodInterceptor(new LogInterceptor());
         advisedSupport.setTargetSource(targetSource);
-        // 默认返回true：即默认需要织入切面逻辑
+        // 默认返回true：即默认需要织入切面逻辑，原本是需要做匹配
         advisedSupport.setMethodMatcher((Method method, Class beanClass) -> true);
 
         helloService = (HelloService) new JdkDynamicAopProxy(advisedSupport).getProxy();
