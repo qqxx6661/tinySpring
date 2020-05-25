@@ -1,4 +1,4 @@
-package com.monitor4all.tinySpring.aop;
+package com.monitor4all.tinySpring.aop.advisor;
 
 import org.aopalliance.aop.Advice;
 

@@ -18,8 +18,10 @@
     <!--  织入的日志切面逻辑  -->
     <bean id="logInterceptor" class="com.monitor4all.tinySpring.aop.LogInterceptor"/>
 
+    <!--  代理类生成类  -->
     <bean id="autoProxyCreator" class="com.monitor4all.tinySpring.aop.AspectJAwareAdvisorAutoProxyCreator"/>
 
+    <!--  配置helloService的切面  -->
     <bean id="helloServiceAspect" class="com.monitor4all.tinySpring.aop.AspectJExpressionPointcutAdvisor">
         <property name="advice" ref="logInterceptor"/>
         <property name="expression" value="execution(* com.monitor4all.tinySpring.service.HelloService.*(..))"/>

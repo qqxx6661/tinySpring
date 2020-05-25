@@ -1,5 +1,6 @@
 package com.monitor4all.tinySpring.aop;
 
+import com.monitor4all.tinySpring.aop.aopproxy.AbstractAopProxy;
 import org.aopalliance.intercept.MethodInterceptor;
 
 import java.lang.reflect.InvocationHandler;

@@ -1,5 +1,6 @@
 package com.monitor4all.tinySpring.aop;
 
+import com.monitor4all.tinySpring.aop.aopproxy.ProxyFactory;
 import com.monitor4all.tinySpring.ioc.BeanPostProcessor;
 import com.monitor4all.tinySpring.ioc.factory.BeanFactory;
 import com.monitor4all.tinySpring.ioc.factory.BeanFactoryAware;

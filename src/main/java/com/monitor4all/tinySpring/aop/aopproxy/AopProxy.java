@@ -1,4 +1,4 @@
-package com.monitor4all.tinySpring.aop;
+package com.monitor4all.tinySpring.aop.aopproxy;
 
 /**
  * 获取代理类接口

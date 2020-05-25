@@ -1,4 +1,6 @@
-package com.monitor4all.tinySpring.aop;
+package com.monitor4all.tinySpring.aop.aopproxy;
+
+import com.monitor4all.tinySpring.aop.AdvisedSupport;
 
 /**
  * AOP代理抽象类
